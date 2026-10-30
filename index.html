@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="修好了——华中师范大学校园设施报修与进度管理原型" />
+    <title>修好了 · 华中师范大学校园报修</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=app-10" />
+  </head>
+  <body>
+    <div id="authRoot" class="auth-root" aria-live="polite"></div>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div class="app-shell is-auth-locked" id="appShell">
+      <aside class="sidebar" aria-label="主导航">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <span class="brand-mark__orbit"></span>
+            <span class="brand-mark__dot"></span>
+          </div>
+          <div>
+            <div class="brand-name">修好了</div>
+            <div class="brand-subtitle">CCNU · 校园设施服务</div>
+          </div>
+        </div>
+
+        <div class="role-switcher" role="group" aria-label="当前账号角色">
+          <button class="role-button is-active" data-role="student" type="button">
+            <span data-icon="user-round" aria-hidden="true"></span>
+            学生端
+          </button>
+          <button class="role-button" data-role="technician" type="button">
+            <span data-icon="wrench" aria-hidden="true"></span>
+            维修师傅端
+          </button>
+        </div>
+
+        <nav class="primary-nav" id="primaryNav"></nav>
+
+        <div class="sidebar-footer">
+          <div class="campus-note">
+            <span class="campus-note__pin" data-icon="map-pin" aria-hidden="true"></span>
+            <div>
+              <strong>桂子山校区</strong>
+              <span>服务网络正常</span>
+            </div>
+            <span class="online-dot" aria-label="在线"></span>
+          </div>
+          <button class="support-link" type="button" data-action="open-guide">
+            <span data-icon="circle-help" aria-hidden="true"></span>
+            <span>服务指南</span>
+            <span class="support-link__arrow" data-icon="arrow-up-right" aria-hidden="true"></span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content" id="main-content" tabindex="-1">
+        <header class="topbar">
+          <div class="breadcrumb" id="breadcrumb">学生端 / 首页</div>
+          <div class="topbar-actions">
+            <button class="icon-button notification-button" type="button" data-action="open-notifications" aria-label="打开通知">
+              <span data-icon="bell" aria-hidden="true"></span>
+              <span class="notification-badge" id="notificationBadge">3</span>
+            </button>
+            <div class="profile-chip" id="profileChip" data-action="logout" role="button" tabindex="0" aria-label="退出登录">
+              <div class="avatar avatar--student">任</div>
+              <div class="profile-chip__copy">
+                <strong>任同学</strong>
+                <span>计算机学院 · 2405</span>
+              </div>
+              <span data-icon="chevron-down" aria-hidden="true"></span>
+            </div>
+          </div>
+        </header>
+        <div id="appContent"></div>
+      </main>
+    </div>
+
+    <div id="modalRoot"></div>
+    <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="js/data.js?v=app-4"></script>
+    <script src="js/icons.js?v=app-2"></script>
+    <script src="js/app.js?v=app-11"></script>
+  </body>
+</html>
+
+
+
